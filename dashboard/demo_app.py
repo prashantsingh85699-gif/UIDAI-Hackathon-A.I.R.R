@@ -29,16 +29,16 @@ def load_data():
             import subprocess
             
             with st.spinner('Generating Mock Data...'):
-                subprocess.run(["python", "scripts/mock_data_gen.py"], check=True)
+                subprocess.run([sys.executable, "scripts/mock_data_gen.py"], check=True)
             
             with st.spinner('Running Data Pipeline...'):
-                subprocess.run(["python", "modules/data_pipeline.py"], check=True)
+                subprocess.run([sys.executable, "modules/data_pipeline.py"], check=True)
                 
             with st.spinner('Scoring Regions...'):
-                subprocess.run(["python", "modules/scoring_engine.py"], check=True)
+                subprocess.run([sys.executable, "modules/scoring_engine.py"], check=True)
                 
             with st.spinner('Detecting Anomalies...'):
-                subprocess.run(["python", "modules/anomaly_detector.py"], check=True)
+                subprocess.run([sys.executable, "modules/anomaly_detector.py"], check=True)
                 
             st.success("Data Generation Complete!")
             st.rerun()

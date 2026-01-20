@@ -1,0 +1,11 @@
+pandas
+numpy
+scipy
+fastapi
+uvicorn
+streamlit
+plotly
+requests
+pyyaml
+scikit-learn
+pyarrow

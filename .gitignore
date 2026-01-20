@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Data (Generated files should not be committed)
+data/outputs/*.parquet
+data/inputs/*.parquet
+# Keep the directory structure though
+!data/outputs/.gitkeep
+!data/inputs/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -65,7 +65,7 @@ def get_summary(df):
 
 # --- Sidebar ---
 st.sidebar.title("Aadhaar Inclusion Risk Radar")
-st.sidebar.caption("Demo Version (Standalone)")
+
 
 st.sidebar.header("Filters")
 # Using a static list for demo speed, or derive from DF

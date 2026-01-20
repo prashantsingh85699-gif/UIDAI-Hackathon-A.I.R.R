@@ -2,6 +2,9 @@
 
 **Prototype v1.0**
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://uidai-hackathon-airr-fnrsde72n5uhxutcebbike.streamlit.app)
+**[🔴 Live Demo](https://uidai-hackathon-airr-fnrsde72n5uhxutcebbike.streamlit.app)** 
+
 A.I.R.R. is an AI-powered analytics system designed for UIDAI to monitor Aadhaar ecosystem health. It scores geographical regions on **Inclusion** (saturation, service quality) and **Risk** (fraud, anomalies) to provide actionable insights for administrators.
 
 ## 🚀 Key Features

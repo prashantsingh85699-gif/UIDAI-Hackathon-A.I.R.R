@@ -1,14 +1,14 @@
 import streamlit as st
 import os
 import sys
-
-# Add the current directory to path so imports work
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
-# Import the main dashboard app
-from dashboard import app
+import runpy
 
 if __name__ == "__main__":
-    # This file acts as a root-level entry point that simply invokes the dashboard code.
-    # It relies on dashboard/app.py (which we have now ensured is the standalone version).
-    pass
+    # Use runpy to execute the dashboard script in the current process.
+    # This ensures that Streamlit magic and re-runs work correctly, 
+    # avoiding issues with module caching that occur when just 'importing' the app.
+    
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    app_path = os.path.join(current_dir, "dashboard", "app.py")
+    
+    runpy.run_path(app_path)

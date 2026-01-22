@@ -51,7 +51,12 @@ def load_data():
     try:
         return pd.read_parquet(DATA_PATH)
     except Exception as e:
-        st.error(f"Error loading data: {e}")
+        st.warning(f"Data seems corrupted. Auto-healing... ({e})")
+        # Self-healing: Delete corrupted file so it regenerates on next run
+        if os.path.exists(DATA_PATH):
+            os.remove(DATA_PATH)
+        st.cache_data.clear()
+        st.rerun()
         return None
 
 def get_summary(df):
